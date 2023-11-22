@@ -7,8 +7,8 @@ object TwoNumberSum {
         println(twoNumberSum2(mutableListOf(3, 5, -4, 8, 11, 1, -1, 6), 10))
     }
 
-    // hash table
-    fun twoNumberSum2(array: MutableList<Int>, targetSum: Int): List<Int> {
+    // hash table, time O(n), space O(n)
+    private fun twoNumberSum2(array: MutableList<Int>, targetSum: Int): List<Int> {
         val hashMap = mutableMapOf<Int, Boolean>()
         array.forEach { firstNum ->
             val secondNum = targetSum - firstNum
@@ -21,8 +21,8 @@ object TwoNumberSum {
         return listOf()
     }
 
-    // two pointers
-    fun twoNumberSum(array: MutableList<Int>, targetSum: Int): List<Int> {
+    // two pointers, time O(n), space O(1)
+    private fun twoNumberSum(array: MutableList<Int>, targetSum: Int): List<Int> {
         array.sort()
 
         var leftIdx = 0
