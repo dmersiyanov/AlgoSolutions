@@ -1,4 +1,4 @@
-package algoExpert.arrays
+package algoExpert.arrays.easy
 
 object TwoNumberSum {
 
